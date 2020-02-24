@@ -1,9 +1,9 @@
-@import url(
+/* @import url(
   https://fonts.googleapis.com/css?family=Oswald:400,
   700&display=swap
 );
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script&display=swap);
-/*! sanitize.css v6.0.0 | CC0 License | github.com/csstools/sanitize.css */
+! sanitize.css v6.0.0 | CC0 License | github.com/csstools/sanitize.css */
 *,
 :after,
 :before {
@@ -925,7 +925,7 @@ input[type="date"]::-webkit-inner-spin-button {
     margin-top: 76px;
     background-size: cover;
     min-height: 400px;
-    padding: 100px 50px 0;
+    padding: 50px 50px 0;
   }
   .slogan-box {
     display: flex;
@@ -1007,7 +1007,7 @@ input[type="date"]::-webkit-inner-spin-button {
     padding: 200px 100px 0;
   }
   .slogan-box__title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .slogan-box__slogan {
     font-size: 1.3rem;
@@ -1250,8 +1250,8 @@ input[type="date"]::-webkit-inner-spin-button {
     text-shadow: 0 0 0.3125rem #000;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1.5625rem;
-    margin-left: 1.875rem;
+    font-size: 1rem;
+    margin-left: 1.3rem;
     color: #fff;
     margin-bottom: 0;
     position: relative;
@@ -1298,7 +1298,7 @@ input[type="date"]::-webkit-inner-spin-button {
   }
   .slider__item {
     min-height: 100vh;
-    padding: 100px 150px 0;
+    padding: 100px 100px 0;
     position: relative;
     margin: 0;
   }
@@ -1543,10 +1543,10 @@ input[type="date"]::-webkit-inner-spin-button {
     margin: auto;
   }
   .slider__item {
-    padding: 250px 150px 0;
+    padding: 150px 150px 0;
   }
   .slogan-box__title {
-    font-size: 5rem;
+    font-size: 2.5rem;
     text-shadow: 0 0 5px #000;
   }
   .slogan-box__img {
@@ -1554,7 +1554,7 @@ input[type="date"]::-webkit-inner-spin-button {
     height: 135px;
   }
   .slogan-box__slogan {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .advantages-section {
     max-width: 1920px;
