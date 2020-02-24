@@ -730,6 +730,9 @@ input[type="date"]::-webkit-inner-spin-button {
   display: none;
   -webkit-appearance: none;
 }
+.contacts-address__text {
+  font-size: 0.7rem;
+}
 .blog-section {
   padding: 1rem;
   font-size: 1.5rem;
@@ -911,6 +914,9 @@ input[type="date"]::-webkit-inner-spin-button {
   transition: transform 0.5s ease;
 }
 @media (min-width: 576px) {
+  .contacts-address__text {
+    font-size: 1rem;
+  }
   .header-box__logo {
     width: 8.4375rem;
     height: 2.5rem;
@@ -996,6 +1002,9 @@ input[type="date"]::-webkit-inner-spin-button {
   }
 }
 @media (min-width: 758px) {
+  .contacts-address__text {
+    font-size: 1rem;
+  }
   body {
     padding: 0;
   }
@@ -1250,8 +1259,8 @@ input[type="date"]::-webkit-inner-spin-button {
     text-shadow: 0 0 0.3125rem #000;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1rem;
-    margin-left: 1.3rem;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
     color: #fff;
     margin-bottom: 0;
     position: relative;
@@ -1532,6 +1541,9 @@ input[type="date"]::-webkit-inner-spin-button {
   }
 }
 @media (min-width: 1200px) {
+  .contacts-address__text {
+    font-size: 1rem;
+  }
   .menu-box__content_opened {
     display: none;
   }
