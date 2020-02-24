@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Barista</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
+      integrity="sha256-P8k8w/LewmGk29Zwz89HahX3Wda5Bm8wu2XkCC0DL9s="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <div class="header-box">
+          <a class="header-box__logo" href="#scroll_start"></a>
+          <!--   desktop menu start   -->
+          <nav class="header-box__menu">
+            <ul class="menu-desktop">
+              <li class="menu-desktop__item">
+                <a class="menu-desktop__link" href="#scroll_aboutUs"
+                  >about us</a
+                >
+              </li>
+              <li class="menu-desktop__item">
+                <a class="menu-desktop__link" href="#scroll_menu">menu</a>
+              </li>
+              <li class="menu-desktop__item">
+                <a class="menu-desktop__link" href="#scroll_gallery">gallery</a>
+              </li>
+              <li class="menu-desktop__item">
+                <a class="menu-desktop__link" href="#scroll_reservation"
+                  >reservation</a
+                >
+              </li>
+              <li class="menu-desktop__item">
+                <a class="menu-desktop__link" href="#scroll_blog">blog</a>
+              </li>
+              <li class="menu-desktop__item">
+                <a class="menu-desktop__link" href="#scroll_contacts"
+                  >contact us</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- desktop menu end -->
+
+          <!-- button opening menu -->
+          <a id="menu_open" href="#" class="click menu-button menu-button_open">
+            <svg
+              class="ico-menu ico-menu_open"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use xlink:href="i/sprite.svg#menu-open" />
+            </svg>
+          </a>
+          <!-- button opening menu end-->
+        </div>
+      </div>
+      <!--   mobile opening menu start  -->
+      <div class="dark-overlay click"></div>
+      <div class="mobile-menu">
+        <a
+          id="menu_close"
+          href="#"
+          class="click menu-button menu-button_close active"
+        >
+          <svg
+            class="ico-menu ico-menu_close"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="i/sprite.svg#menu-close" />
+          </svg>
+        </a>
+        <nav>
+          <ul class="menu-mobile">
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#scroll_aboutUs">about us</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#scroll_menu">menu</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#scroll_gallery">Gallery</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#scroll_reservation"
+                >reservation</a
+              >
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#scroll_blog">blog</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#scroll_contacts"
+                >contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- mobile menu end -->
+      <a href="#scroll_start" id="scroll" class="btn-up"
+        ><span class="btn-up__arrow"></span
+      ></a>
+
+      <!-- slider start -->
+      <div id="app6" class="slider">
+        <!-- v-for slider items -->
+        <div
+          v-for="item in sliderItems"
+          :class="'slider__item slider__item_'+item.id"
+          class="section-scroll"
+          id="scroll_start"
+        >
+          <div class="slogan-box">
+            <div class="slogan-box__img"></div>
+            <h1 class="slogan-box__title">{{item.title}}</h1>
+            <p class="slogan-box__slogan">
+              {{item.slogan}}
+            </p>
+          </div>
+        </div>
+        <!-- v-for slider items end-->
+      </div>
+      <div class="slider-container-dots"></div>
+      <!-- slider end -->
+
+      <div class="container_wrapper">
+        <img class="wrapper wrapper_first" src="i/wrapper.svg" alt="" />
+      </div>
+    </header>
+
+    <main>
+      <!-- section advantages-->
+      <section id="scroll_aboutUs" class="advantages-section section-scroll">
+        <div class="advantages-box">
+          <!-- animation element start -->
+          <div class="advantages-animated advantages-animated_cup"></div>
+          <div class="advantages-animated advantages-animated_spoon"></div>
+          <div class="advantages-animated advantages-animated_croissant"></div>
+          <div class="advantages-animated advantages-animated_cake"></div>
+          <!-- animation element end -->
+          <h2 class="advantages-box__title">What we offer...</h2>
+          <div id="app5" class="advantages-box__content">
+            <!-- v-for advantages -->
+            <div v-for="item in advantages" class="advantages-content-item">
+              <svg
+                class="advantages-content-item__ico"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 500 500"
+              >
+                <use :xlink:href="'i/sprite.svg#'+item.icoId" />
+              </svg>
+              <h4 class="advantages-content-item__title">{{item.title}}</h4>
+              <p class="advantages-content-item__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                atque quae deserunt minima voluptatem laudantium cupiditate
+                doloremque adipisci quasi pariatur?
+              </p>
+            </div>
+            <!-- v-for advantages end-->
+          </div>
+        </div>
+      </section>
+      <div class="container_wrapper">
+        <img class="wrapper wrapper_second" src="i/wrapper-2.svg" alt="" />
+      </div>
+      <!-- end section advantages-->
+
+      <!--section menu -->
+      <section id="scroll_menu" class="menu-section section-scroll">
+        <div id="app" class="menu-box">
+          <div class="menu-box__header">
+            <h2 class="menu-box__title">Explore our menu...</h2>
+            <select v-model.number="selectedCats" class="menu-box__select">
+              <option value="-1">All</option>
+              <option v-for="cat in cats" :value="cat.id">{{cat.title}}</option>
+            </select>
+          </div>
+
+          <div v-if="totalPages > 1" class="pagination">
+            <span
+              v-for="page in totalPages"
+              @click="currentPage=page"
+              :class="{'active': page===currentPage}"
+              class="pagination__page"
+              >{{page}}</span
+            >
+          </div>
+
+          <div class="menu-box__content coffee-menu">
+            <div
+              v-for="item in getProducts"
+              class="coffee-menu__item coffee-item"
+              :key="item.id"
+            >
+              <div class="coffee-item__image">
+                <img
+                  class="coffee-img img-fluid"
+                  :data-hint="item.hint"
+                  :src="'i/'+item.im"
+                />
+              </div>
+              <div class="coffee-item__title">{{item.title}}</div>
+              <div class="coffee-item__underline"></div>
+              <div class="coffee-item__price">{{item.price}}$</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container_wrapper">
+        <img class="wrapper wrapper_third" src="i/wrapper.svg" alt="" />
+      </div>
+      <!--end section menu -->
+
+      <!--section gallery -->
+      <section id="scroll_gallery" class="gallery-section section-scroll">
+        <div id="app1" class="gallery-box">
+          <h2 class="gallery-box__title">Our gallery...</h2>
+          <div class="gallery-box__content">
+            <!-- v-for gallery grid images -->
+            <a
+              v-for="img in images"
+              class="gallery-box__item"
+              :class="'gallery-box__item_'+img.id"
+              data-fancybox="gallery"
+              :data-caption="img.title"
+              :href="'i/'+img.im"
+              ><img class="img-fluid img-gallery" :src="'i/'+img.im"
+            /></a>
+            <!-- v-for gallery grid images end-->
+          </div>
+        </div>
+      </section>
+      <!--end section gallery -->
+
+      <!--section reservation -->
+      <section
+        id="scroll_reservation"
+        class="reservation-section section-scroll"
+      >
+        <div class="reserve-box">
+          <h2 class="reserve-box__title">Reserve your table here...</h2>
+          <div class="reserve-box__image reserve-box__image_1"></div>
+          <div class="reserve-box__image reserve-box__image_2"></div>
+          <div class="reserve-box__image reserve-box__image_3"></div>
+          <div class="reserve-box__image reserve-box__image_4"></div>
+          <div class="reserve-box__content">
+            <form id="app2" @submit="checkForm" novalidate="true">
+              <div class="reserve-box__input reserve-box__input_name">
+                <input
+                  v-model="inputName"
+                  class="input input_name"
+                  id="input-name"
+                  type="text"
+                  placeholder="John Smith *"
+                  required
+                />
+                <div
+                  v-if="responseName.length"
+                  class="input-response input-response_name"
+                >
+                  {{responseName}}
+                </div>
+                <div v-else class="input-response"></div>
+              </div>
+              <div class="reserve-box__input reserve-box__input_phone">
+                <input
+                  v-mask="'(380)##-###-####'"
+                  v-model="inputPhone"
+                  id="input input-phone"
+                  placeholder="(+380)xx-xxx-xxxx *"
+                  type="tel"
+                  name="phone"
+                  maxlength="17"
+                  class="input input_phone"
+                  required
+                />
+                <div
+                  v-if="responsePhone.length"
+                  class="input-response input-response_phone"
+                >
+                  {{responsePhone}}
+                </div>
+                <div v-else class="input-response"></div>
+              </div>
+              <div class="reserve-box__input reserve-box__input_email">
+                <input
+                  v-model="inputEmail"
+                  placeholder="test@email.com *"
+                  type="email"
+                  name="email"
+                  id="input-email"
+                  class="input input_email"
+                  required
+                />
+                <div
+                  v-if="responseEmail.length"
+                  class="input-response input-response_email"
+                >
+                  {{responseEmail}}
+                </div>
+                <div v-else class="input-response"></div>
+              </div>
+              <div class="reserve-box__input reserve-box__input_data">
+                <div class="reserve-box-data">
+                  <input
+                    onfocus="(this.type='date')"
+                    onfocusout="if(!this.value){this.type='text'}"
+                    v-model="inputDate"
+                    type="text"
+                    placeholder="16.01.2020 *"
+                    id="input-date"
+                    class="reserve-box-data__item reserve-box-data__item_date"
+                    :min="getCurrentDate"
+                  />
+                  <div
+                    v-if="responseDate.length"
+                    class="input-response input-response_data"
+                  >
+                    {{responseDate}}
+                  </div>
+                  <div v-else class="input-response input-response_data"></div>
+                </div>
+                <div class="reserve-separator">AT</div>
+                <div class="reserve-box-data">
+                  <input
+                    onfocus="(this.type='time')"
+                    onfocusout="if(!this.value){this.type='text'}"
+                    v-model="inputTime"
+                    placeholder="11:30 *"
+                    type="text"
+                    min="07:00"
+                    max="22:00"
+                    id="input-time"
+                    class="reserve-box-data__item reserve-box-data__item_time"
+                  />
+                  <div
+                    v-if="responseTime.length"
+                    class="input-response input-response_data"
+                  >
+                    {{responseTime}}
+                  </div>
+                  <div v-else class="input-response input-response_data"></div>
+                </div>
+                <div class="reserve-separator">FOR</div>
+                <div class="reserve-box-data">
+                  <select
+                    v-model.number="inputPerson"
+                    class="reserve-box-data__item reserve-box-data__item_person"
+                  >
+                    <option v-for="item in optPerson" :value="item.value"
+                      >{{item.title}}</option
+                    >
+                  </select>
+                </div>
+              </div>
+
+              <div class="reserve-box__input reserve-box__input_submit">
+                <input
+                  :disabled="validated"
+                  class="btn btn_submit"
+                  type="submit"
+                  value="Book a table"
+                />
+                <div
+                  v-if="responseSubmit.length"
+                  class="input-response input-response_submit"
+                >
+                  {{responseSubmit}}
+                </div>
+                <div v-else class="input-response input-response_submit">
+                  {{responseSubmit}}
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--end section reservation -->
+
+      <!-- parallax-window -->
+      <div>
+        <div class="container_wrapper">
+          <img class="wrapper wrapper_second" src="i/wrapper-2.svg" alt="" />
+        </div>
+        <div class="parallax-window">
+          <img src="i/Craft-logo-2.png" alt="" />
+        </div>
+        <div class="container_wrapper">
+          <img class="wrapper wrapper_third" src="i/wrapper.svg" alt="" />
+        </div>
+      </div>
+
+      <!--section blog  -->
+      <section id="scroll_blog" class="blog-section section-scroll">
+        <div class="blog-box">
+          <h2 class="blog-box__title">Read about us...</h2>
+           <div class="blog-box__banner banner-timer">
+            <p class="banner-timer__title">opening soon! coffee shop</p>
+            <div class="banner-timer__time" id="showtime"></div>
+          </div>
+          <nav class="blog-box__nav nav">
+            <button class="nav__item" data-filter="article">all</button>
+            <button class="nav__item" data-filter="special-offers">
+              special offers
+            </button>
+            <button class="nav__item" data-filter="about-us">about us</button>
+            <button class="nav__item" data-filter="facts">facts</button>
+          </nav>
+          <div id="app3" class="blog-box__content">
+            <!-- v-for articles -->
+            <article
+              v-for="item in articles"
+              class="article"
+              :class="item.class"
+              :data-create="item.create"
+            >
+              <a :href="'i/'+item.im">
+                <figure class="article__content">
+                  <img class="article__img" :src="'i/'+item.im" />
+                  <figcaption>
+                    <h2 class="article__text article__text_title">
+                      {{item.title}}
+                    </h2>
+                    <p class="article__text article__text_date">
+                      Created: {{item.create}}
+                    </p>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+            <!-- v-for articles end-->
+          </div>
+        </div>
+      </section>
+      <!--end section blog  -->
+    </main>
+    <!--section contacts  -->
+    <footer>
+      <section id="scroll_contacts" class="contacts-section section-scroll">
+        <h2 class="contacts-section__title">Our contacts...</h2>
+        <div class="contacts-section__content contact-box">
+          <div id="app4" class="contact-box__container">
+            <div class="contact-box-title">opening hours</div>
+            <!-- v-for opening hours -->
+            <div v-for="item in hours" class="contacts-day">
+              <p class="contacts-day__day">{{item.title}}</p>
+              <div class="contacts-day__underline"></div>
+              <p class="contacts-day__hour">{{item.time}}</p>
+            </div>
+            <!-- v-for opening hours end-->
+          </div>
+          <div class="contact-box__container">
+            <div class="contact-box-title">contact us</div>
+            <div class="contacts-address">
+              <div>
+                <svg
+                  class="contacts-address__ico ico"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 500 500"
+                >
+                  <use xlink:href="i/sprite.svg#phone" />
+                </svg>
+              </div>
+              <a href="tel:+370553853686" class="contacts-address__link"
+                ><div class="contacts-address__text">+370553853686</div></a
+              >
+            </div>
+            <div class="contacts-address">
+              <div>
+                <svg
+                  class="contacts-address__ico ico"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 500 500"
+                >
+                  <use xlink:href="i/sprite.svg#enviroment" />
+                </svg>
+              </div>
+              <a
+                href="https://g.page/BeetrootAcademyOdesa?share"
+                class="contacts-address__link"
+              >
+                <div class="contacts-address__text">
+                  Odessa, Astashkina street, 29
+                </div>
+              </a>
+            </div>
+            <div class="contacts-address">
+              <div>
+                <svg
+                  class="contacts-address__ico ico"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 500 500"
+                >
+                  <use xlink:href="i/sprite.svg#mail" />
+                </svg>
+              </div>
+              <a href="mailto:barista_info@gmail.com" class="contacts-address__link"
+                ><div class="contacts-address__text">
+                  barista_info@gmail.com
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+        <div id="map" class="contacts-section__map"></div>
+        <div class="contacts-section__footer">
+          <div class="contacts-links">
+            <div class="contacts-links__item">
+              <a href="#">
+                <svg
+                  class="contacts-links__ico ico"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 500 500"
+                >
+                  <use xlink:href="i/sprite.svg#telegram" />
+                </svg>
+              </a>
+            </div>
+            <div class="contacts-links__item">
+              <a href="#">
+                <svg
+                  class="contacts-links__ico ico"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 500 500"
+                >
+                  <use xlink:href="i/sprite.svg#youtube" />
+                </svg>
+              </a>
+            </div>
+            <div class="contacts-links__item">
+              <a href="#">
+                <svg
+                  class="contacts-links__ico ico"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 500 500"
+                >
+                  <use xlink:href="i/sprite.svg#facebook" />
+                </svg>
+              </a>
+            </div>
+            <div class="contacts-links__item">
+              <a href="#">
+                <svg
+                  class="contacts-links__ico ico"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 500 500"
+                >
+                  <use xlink:href="i/sprite.svg#instagram" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section contacts  -->
+    </footer>
+
+    <!-- scripts cdnjs-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"
+      integrity="sha256-yDarFEUo87Z0i7SaC6b70xGAKCghhWYAZ/3p+89o4lE="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"
+      integrity="sha256-CfyPGYLRQ4v1O+mZa5ocQglABXGuaZmmfe8awy8Fxis="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/v-mask/2.0.2/v-mask.min.js"
+      integrity="sha256-VdO58Pbd6n22eVZe3urjRz4tPQBq4T+P/z8jjW6XTPI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"
+      integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+      integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-3Y31XZOsRgdhm08nr3PJ0kjPvc8YM2s&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="js/vue.js"></script>
+    <script src="js/allData.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      Vue.use(VueMask.VueMaskPlugin);
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          products: menu.products,
+          cats: menu.cats,
+          selectedCats: -1,
+
+          // pagination
+          totalPages: 0,
+          perPage: 6,
+          currentPage: 1
+        },
+        watch: {
+          selectedCats() {
+            this.currentPage = 1;
+          }
+        },
+        computed: {
+          getProducts() {
+            let prod = this.products.filter(
+              item =>
+                this.selectedCats === -1 || item.cid.includes(this.selectedCats)
+            );
+            this.totalPages = Math.ceil(prod.length / this.perPage);
+            const last = this.currentPage * this.perPage;
+            const first = last - this.perPage;
+            return prod.slice(first, last);
+          }
+        }
+      });
+      const vm1 = new Vue({
+        el: "#app1",
+        data: {
+          images: gallery.images
+        }
+      });
+      const vm2 = new Vue({
+        el: "#app2",
+        data: {
+          inputPhone: "",
+          inputEmail: "",
+          inputName: "",
+          inputPerson: 1,
+          inputDate: "",
+          inputTime: "",
+          responseName: "",
+          responsePhone: "",
+          responseEmail: "",
+          responseSubmit: "",
+          responseDate: "",
+          responseTime: "",
+          validated: false,
+          optPerson: [
+            { value: 1, title: "1 person" },
+            { value: 2, title: "2 people" },
+            { value: 3, title: "3 people" },
+            { value: 4, title: "4 people" },
+            { value: 5, title: "5 people" }
+          ]
+        },
+        watch: {
+          inputName() {
+            this.responseName = "";
+          },
+          inputPhone() {
+            this.responsePhone = "";
+          },
+          inputEmail() {
+            this.responseEmail = "";
+          },
+          inputTime() {
+            this.responseTime = "";
+          },
+          inputDate() {
+            this.responseDate = "";
+          }
+        },
+        computed: {
+          getCurrentDate() {
+            const n = new Date();
+            const y = n.getFullYear();
+            let m = n.getMonth() + 1;
+            let d = n.getDate();
+
+            if (m < 10) m = "0" + m;
+            if (d < 10) d = "0" + d;
+            return y + "-" + m + "-" + d;
+          }
+        },
+        methods: {
+          checkForm: function(e) {
+            e.preventDefault();
+            if (!this.inputName) {
+              this.responseName = "Please, enter your name!";
+            }
+            if (!this.inputEmail) {
+              this.responseEmail = "Please, enter your email!";
+            } else if (!this.validEmail(this.inputEmail)) {
+              this.responseEmail = "Please, enter your email correctly!";
+            }
+            if (!this.inputTime) {
+              this.responseTime = "Please, enter time!";
+            }
+            if (!this.inputDate) {
+              this.responseDate = "Please, enter date!";
+            }
+            if (!this.inputPhone) {
+              this.responsePhone = "Please, enter your phone!";
+            } else if (this.inputPhone.length < 16) {
+              this.responsePhone = "Please, enter your phone correctly!";
+            }
+
+            if (
+              this.responseName.length ||
+              this.responsePhone.length ||
+              this.responseEmail.length ||
+              this.responseDate.length ||
+              this.responseTime.length
+            ) {
+              return true;
+            } else {
+              this.validated = true;
+              this.responseSubmit = "Thank you!";
+            }
+          },
+          validEmail: function(email) {
+            const re = /.+@.+\..+/;
+            return re.test(email);
+          }
+        }
+      });
+      const vm3 = new Vue({
+        el: "#app3",
+        data: {
+          articles: blog.articles
+        }
+      });
+      const vm4 = new Vue({
+        el: "#app4",
+        data: {
+          hours: contacts.hours
+        }
+      });
+      const vm5 = new Vue({
+        el: "#app5",
+        data: {
+          advantages: advantages.items
+        }
+      });
+      const vm6 = new Vue({
+        el: "#app6",
+        data: {
+          sliderItems: slider.items
+        }
+      });
+    </script>
+  </body>
+</html>
