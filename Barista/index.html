@@ -11,6 +11,7 @@
       integrity="sha256-P8k8w/LewmGk29Zwz89HahX3Wda5Bm8wu2XkCC0DL9s="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
@@ -402,7 +403,7 @@
       <section id="scroll_blog" class="blog-section section-scroll">
         <div class="blog-box">
           <h2 class="blog-box__title">Read about us...</h2>
-           <div class="blog-box__banner banner-timer">
+          <div class="blog-box__banner banner-timer">
             <p class="banner-timer__title">opening soon! coffee shop</p>
             <div class="banner-timer__time" id="showtime"></div>
           </div>
@@ -514,7 +515,9 @@
                   <use xlink:href="i/sprite.svg#mail" />
                 </svg>
               </div>
-              <a href="mailto:barista_info@gmail.com" class="contacts-address__link"
+              <a
+                href="mailto:barista_info@gmail.com"
+                class="contacts-address__link"
                 ><div class="contacts-address__text">
                   barista_info@gmail.com
                 </div></a
@@ -632,8 +635,7 @@
       async
       defer
     ></script>
-    <script src="js/vue.js"></script>
-    <script src="js/allData.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/script.js"></script>
     <script>
       Vue.use(VueMask.VueMaskPlugin);
