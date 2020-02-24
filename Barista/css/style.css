@@ -843,6 +843,8 @@ input[type="date"]::-webkit-inner-spin-button {
 .contacts-section__map {
   height: 18.75rem;
   width: 100%;
+  background-image: url(../i/map.png);
+  background-size: cover;
 }
 .contacts-section__footer {
   padding: 1rem 0;
