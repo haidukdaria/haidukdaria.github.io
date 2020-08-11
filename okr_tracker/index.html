@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OKR tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/theme/default.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <okr-component
+        v-for="okr in okrs"
+        :okr="okr"
+        :key="okr.id"
+      ></okr-component>
+
+      <div class="form-container">
+        <div class="form-container__group">
+          <input
+            placeholder="Add new Objective"
+            @keyup.enter="addOKR"
+            v-model="newObjective"
+            type="text"
+            value="addOKR"
+            class="add-new-input focus-effect"
+          />
+        </div>
+        <button
+          v-if="newObjective.length>3"
+          @click="addOKR"
+          class="add-new-button focus-effect"
+        >
+          Add OKR
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"
+      integrity="sha256-NSuqgY2hCZJUN6hDMFfdxvkexI7+iLxXQbL540RQ/c4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/dist/vue-slider-component.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
